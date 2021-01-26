@@ -34,7 +34,11 @@ class App extends React.Component{
               this.state.datos.map((texto, index) => (
                  <Card 
                     titulo1={texto.name}
-                    numero={texto.id}
+                    numero=
+                    {texto.id<=9
+                     ?"0"+texto.id
+                     :texto.id               
+                    }
                     ruta={texto.image}
                     titulo2={texto.species}
                     des={texto.status}
