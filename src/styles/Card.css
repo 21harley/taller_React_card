@@ -1,0 +1,200 @@
+.Card{
+    width: 220px;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 35% 65%;
+    border-radius: 20px;
+    color: black;
+}
+
+.header-Card{
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: grid;
+  grid-template-rows: 40% 40% 20%;
+}
+.header-top{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 20% 10% 10% ;
+}
+
+.puntos-v,.buscar{
+    width: 40px;
+    height: 10px;
+    color: #ff9e00;
+}
+.title-1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+.number{
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    position: relative;
+    right: -30px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 26px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: black;
+}
+
+.body-Card{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+}
+.infor-pos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.infor{
+    position: relative;
+    left: -25px;
+    width: 18px;
+    height: 18px;
+    color: white;
+    background-color: gray;
+    border-radius: 50%;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+.body-Card-des{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.circul-h{
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    position: relative;
+    right: -25px;
+}
+.barra,.barra::before,.barra::after{
+    position: relative;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    top: 7px;
+    right: -5px;
+    border-radius: 25%;
+}
+.barra::before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0px;
+  
+}
+.barra::after{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0px;
+}
+
+.title-2{
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+}
+
+.descri{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.linea{
+    width: 100%;
+}
+.descriTxt{
+    height: 10px;
+}
+.pos-punto-h{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.puntos-h{
+    height: 6px;
+    width: 6px;
+    background-color: grey;
+    border-radius: 50%;
+    box-shadow: -10px 0px 0px .4px blue,
+    -20px 0px 0px .4px grey,
+    10px 0px 0px .4px grey,
+    20px 0px 0px .4px grey,
+    30px 0px 0px .4px grey;
+}
+.pos-punto-v{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.puntos-v{
+    height: 3px;
+    width: 3px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0px 10px 0px .4px yellow,
+    0px -10px 0px .4px yellow;
+}
+
+.pos-buscar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.buscar{
+    position: relative;
+    width: 8px;
+    height: 8px;
+    background-color: blueviolet;
+    right: -15px;
+    border-radius:50%;
+    box-shadow: 0px 0px 1px 3px yellow;
+    z-index: 2;
+}
+.buscar::before{
+    content: '';
+    position: absolute;
+    background-color: yellow;
+    width: 12px;
+    height: 3px;
+    border-radius: 25px;
+    transform: rotate(50deg);
+    top: 11px;
+    right: -10px;
+}
