@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/App.css';
 import Card from './Card.js';
+import axios from 'axios';
 
 class App extends React.Component{
    constructor(props){
       super(props)
-      this.consultaApi()
+      this.consultaApiAxios()
       this.state={datos:[]}
    }
    
@@ -18,6 +19,13 @@ class App extends React.Component{
           console.log(api.results)
           this.setState({datos:api.results})
        })
+   }
+   consultaApiAxios(){
+      axios.get(`https://rickandmortyapi.com/api/character`)
+      .then(res => {
+         console.log(res);
+        this.setState({datos:res.data.results});
+      })
    }
    render(){
        return(

@@ -2,7 +2,18 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 280px 280px 280px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem 2rem;
+}
+@media screen and (max-width: 750px) {
+    .app{
+        display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 490px) {
+    .app{
+        display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
 }

@@ -1,12 +1,13 @@
 :root{
   --color-white:#fffff;
   --color-body:#ff9e00;
+  --color-body1:#000000;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-body);
+  background-color: var(--color-body1);
   width: 100%;
   height: 100vh;
 }
@@ -17,5 +18,6 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-
+  margin: 1rem auto;
+  width: 95%;
 }
