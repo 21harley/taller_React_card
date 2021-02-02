@@ -1,11 +1,13 @@
 import React from 'react';
-import '../styles/Card.css';
 
 class Card extends React.Component{
+    onClickEvent(numero){
+        console.log('CLICK',numero)
+    }
 
    render(){
        return(
-         <div className="Card">
+         <div className="Card" onClick={()=>this.onClickEvent(this.props.numero)}>
              <div className="header-Card">
                 <div className="header-top">
                     <span></span>

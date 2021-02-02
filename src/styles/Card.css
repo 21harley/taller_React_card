@@ -5,6 +5,8 @@
     --color-card-three:#CCFF0D ;
 }
 .Card{
+    position: relative;
+    top: 10px;
     width: 220px;
     height: 300px;
     margin: auto;

@@ -1,9 +1,17 @@
+@import './Card.css';
+.app-pos{
+  display: grid;
+  place-items: center;
+  height: 86%;
+}
 .app{
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem 2rem;
+    overflow-y: scroll;
+    
 }
 @media screen and (max-width: 750px) {
     .app{
