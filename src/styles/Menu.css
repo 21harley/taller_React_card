@@ -26,6 +26,9 @@
 
 .menu-items{
   width: 100px;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 .link{
     text-decoration: none;
@@ -46,6 +49,12 @@
     height: 70px;
     right: -50px;
 }
+
+.activeMenu{
+    background: linear-gradient(0deg, rgba(0, 153, 255, 0.952), rgba(0,0,0,0) 8%),
+    linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 90%);
+}
+
 @media screen and (max-width: 750px) {
     .logo-img-nav{
         width: 150px;

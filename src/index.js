@@ -11,12 +11,13 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter ,Route,Switch} from "react-router-dom";
 
 document.getElementById('root').className+="root";
+let valor=0;
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
         <Menu />
       <Switch>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={Home} />
         <Route exact path="/info" component={Info}/>
         <Route exact path="/Card" component={App}/>
         <Route exact path="/contacto" component={Contacto}/>
