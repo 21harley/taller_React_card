@@ -4,10 +4,13 @@ class Menu extends React.Component{
     
     menuShow(e) {
      if(e.target.matches(".link")){
+        
         const cam=document.querySelector(".menu-items.activeMenu");
         cam.classList.remove("activeMenu");
+        
         const father=e.target.parentElement;
         father.classList.add("activeMenu");
+        
         e.preventDefault();
      }
     }

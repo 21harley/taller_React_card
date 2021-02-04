@@ -34,9 +34,6 @@
   border-radius: 100%;
 }
 
-
-
-
 @media screen and (max-width: 750px) {
     .fondo-img{
         width: 80%;
@@ -47,5 +44,8 @@
     .fondo-img{
         width: 100%;
         height: 450px;   
+    }
+    .fondo-title{
+        font-size: 60px;
     }
 }

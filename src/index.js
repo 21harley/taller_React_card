@@ -11,7 +11,6 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter ,Route,Switch} from "react-router-dom";
 
 document.getElementById('root').className+="root";
-let valor=0;
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
