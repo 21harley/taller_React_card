@@ -48,7 +48,7 @@ class Home extends React.Component{
        <div className="fondo">
             <img className="fondo-img" alt="Fondo" src="https://www.xtrafondos.com/wallpapers/rick-y-morty-en-el-espacio-6046.jpg"/>
             <div className="fondo-title-pos">
-               <h1 className="fondo-title">Hello</h1>
+               <h1 className="fondo-title">hello</h1>
             </div>
             <div className="fondo-img2-pos">
                <img className="fondo-img2" alt="Fondo" src="https://cafetoons.net/wp-content/uploads/2019/11/a9529298e561cfd5d521f3acb4cb215a.gif"/>
