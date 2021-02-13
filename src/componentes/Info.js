@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import menuShow from './menuShow';
 
 class Info extends React.Component{
     constructor(props){
@@ -7,20 +8,23 @@ class Info extends React.Component{
         this.state={datos:[]}
      }
      componentDidMount(){
-        this.consultaApiAxios()
-     }
-     consultaApiAxios(){
+      menuShow(document,4);
+      this.consultaApiAxios()   
+    }
+
+    consultaApiAxios(){
       axios.get(`https://rickandmortyapi.com/api/character`)
       .then(res => {
         this.setState({datos:res.data.results});
       })
-     }
+    }
+
    render(){
        return(
         <div className="fondo">
-            <img className="fondo-img" src="https://i.pinimg.com/originals/e9/7c/c3/e97cc329984a848cab048cad41cea08e.jpg"/>
+            <img className="fondo-img" alt="Infor" src="https://i.pinimg.com/originals/e9/7c/c3/e97cc329984a848cab048cad41cea08e.jpg"/>
             <div className="fondo-title-pos">
-                <h1 className="fondo-title">Info</h1>
+                <a className="fondo-title" target="_blank" rel="noreferrer" href="https://rickandmorty.fandom.com/wiki/Rickipedia">Info</a>
            </div>
         </div>
        );

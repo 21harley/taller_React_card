@@ -29,8 +29,26 @@
   border-top-right-radius: 20px;
   display: grid;
   grid-template-rows: 40% 40% 20%;
-  box-shadow: 0px 0px 15px 3px var(--color-card-three);
+  box-shadow: 0px 0px 10px 3px var(--color-card-three);
   z-index: 2;
+  animation-duration: 3s;
+  animation-name: pulso;
+  animation-iteration-count: infinite;
+  animation-delay: -1.5s;
+}
+@keyframes pulso{
+    0%{
+        box-shadow: 0px 0px 10px 3px var(--color-card-three);
+    }
+    50%{
+        box-shadow: 0px 0px 15px 3px var(--color-card-three);
+    }
+    99%{
+        box-shadow: 0px 0px 11px 3px var(--color-card-three);
+    }
+    100%{
+        box-shadow: 0px 0px 10px 3px var(--color-card-three);
+    }
 }
 .header-top{
     width: 100%;
@@ -92,6 +110,7 @@
     text-align: center;
     display: grid;
     align-items: center;
+    cursor: pointer;
 }
 .body-Card-des{
     height: 100%;
@@ -207,7 +226,9 @@
     width: 8px;
     height: 8px;
     background-color: #32cd32;
-    right: -15px;
+    right: 30px;
+    bottom: -10px;
+    top: 6px;
     border-radius:50%;
     box-shadow: 0px 0px 1px 3px yellow;
     z-index: 2;

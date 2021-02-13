@@ -1,30 +1,25 @@
 import React from 'react';
+import modal from './Modal';
 
 class Card extends React.Component{
     onClickEvent(numero){
-        console.log('CLICK',numero)
+        let ar=[this.props.titulo1,this.props.ruta];
+        modal(2,ar);
     }
 
    render(){
        return(
-         <div className="Card" onClick={()=>this.onClickEvent(this.props.numero)}>
+         <div className="Card" alt={this.props.titulo1} onClick={()=>this.onClickEvent(this.props.number)}>
              <div className="header-Card">
-                <div className="header-top">
-                    <span></span>
-                    <div className="pos-buscar">
-                        <div className="buscar"></div>
-                    </div>
-                    <div className="pos-punto-v">
-                        <div className="puntos-v"></div>
-                    </div>    
+                <div className="header-top">  
                 </div>
-                <div className="title-1">{this.props.titulo1}</div>
+                <div className="title-1">{this.props.titulo1} </div>
                 <div className="number">
                    {this.props.numero}
                 </div>
              </div>
              <div className="body-Card">
-                <div className="infor-pos">
+                <div className="infor-pos" title="more information">
                     <div className="infor">
                       i
                     </div>
@@ -46,9 +41,6 @@ class Card extends React.Component{
                         </div>
                     </div>
                  </div>
-                <div className="pos-punto-h">
-                   <div className="puntos-h"></div>
-                </div>
              </div>
          </div>
        );

@@ -10,6 +10,7 @@ import PageNotFound from './componentes/PageNotFound';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter ,Route,Switch} from "react-router-dom";
 
+
 document.getElementById('root').className+="root";
 ReactDOM.render(
   <React.StrictMode>

@@ -26,7 +26,7 @@
 
 .menu-items{
   width: 100px;
-  height: 100%;
+  height: 50%;
   display: grid;
   place-items: center;
 }
@@ -52,26 +52,94 @@
 
 .activeMenu{
     background: linear-gradient(0deg, rgba(0, 153, 255, 0.952), rgba(0,0,0,0) 8%),
-    linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 90%);
+    linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 80%);
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    0%{
+        background: linear-gradient(0deg, rgba(0, 153, 255, 0.952), rgba(0,0,0,0) 8%),
+        linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 1%);
+    }
+    50%{
+        background: linear-gradient(0deg, rgba(0, 153, 255, 0.952), rgba(0,0,0,0) 8%),
+        linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 50%);
+    }
+    99%{
+        background: linear-gradient(0deg, rgba(0, 153, 255, 0.952), rgba(0,0,0,0) 8%),
+        linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 99%);
+    }
+    100%{
+        background: linear-gradient(0deg, rgba(0, 153, 255, 0.952), rgba(0,0,0,0) 8%),
+        linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 100%);
+    }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
     .logo-img-nav{
         width: 150px;
         height: 50px;
         right: -25px;   
     }
-    .menu-nav-item{
-        
-    }
 }
-@media screen and (max-width: 490px) {
+
+@media screen and (max-width: 650px){
+
+    .pos-filter{
+        right:calc(60%);
+    }
     .logo-img-nav{
-        width: 150px;
-        height: 50px;
-        right: 0px;  
+        display: none;
     }
-    .menu-nav-item{
+    .logo-nav{
+        height: 10px;
+        width: 60px;
+        background-color: yellow;
+        border-radius: 50px;
+        position: relative;
+        top: 30px;
+        right: calc(-10%);
+    }
+    .logo-nav:after{
+       content: '';
+       position: absolute;
+       height: 10px;
+       width: 60px;
+       background-color: yellow;
+       border-radius: 50px;
+       top: 15px;
+    }
+    .logo-nav::before{
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 60px;
+        background-color: yellow;
+        border-radius: 50px;
+        top: -15px;
+     }
+     .menu-nav-item{
+        background-color:black;
+        opacity: 0.5;
+        display: grid;
+        position: fixed;
+        width: 100%;
         font-size: small;
+        z-index: 10;
+        opacity:"0";
+        visibility:hidden;
+        transition: all 1s;
     }
+    .menu-items{
+        font-size: 40px;
+        opacity: 1;
+        width: 300px;
+    }
+    .activeMenu{
+        background: linear-gradient(0deg, rgba(99, 248, 0), rgba(0,0,0,0) 8%),
+        linear-gradient(0deg, rgb(99, 248, 0), rgba(0, 0, 0, 0) 30%);
+        animation-duration: 3s;
+        animation-name: none;
+    }
+  
 }
