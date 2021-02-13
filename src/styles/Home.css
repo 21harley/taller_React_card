@@ -45,7 +45,6 @@
     position: fixed;
     width: 80%;
     height: 60%;
-    border:1px solid aqua;
     border-radius: 25px;
     display: grid;
     grid-template-rows: 80% 20%;
